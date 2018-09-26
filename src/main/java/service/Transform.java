@@ -44,11 +44,7 @@ public class Transform {
         }
         return map;
     }
-
-    private Comparator<Person> getComparator() {
-        Comparator<Person> nameComparator = Comparator.comparing(Person::getAge);
-        return nameComparator;
-    }
+    
 
     private List<Person> sortByName(List<Person> input) {
         Collections.sort(input,
