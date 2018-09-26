@@ -33,11 +33,12 @@ public class Transform {
         Map<String, Integer> map = new HashMap<>();
         for(Person person : input) {
             String name = person.getName();
-            int age = map.get(name);
             if(map.containsKey(name)) {
+                int age = map.get(name);
                 int newAge = age + person.getAge();
                 map.put(name, newAge);
             } else {
+                int age = person.getAge();
                 map.put(name, age);
             }
         }
